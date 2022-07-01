@@ -8,10 +8,8 @@ resource "aws_instance" "sample" {
   }
 
 resource "key_pair" "etc_auth" {
-
   key_name   = "etckey"
-  public_key = file{"~/.ssh/etckey.pub"}
-
+  public_key = file("~/.ssh/etckey.pub")
 }
 
 
