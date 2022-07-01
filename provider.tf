@@ -5,7 +5,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "tf-bucket-finstop"
+    bucket = "s3-tf-finstop123"
     key    = "sample/terraform.tfstate"
     region = "us-east-1"
   }
