@@ -7,6 +7,13 @@ resource "aws_instance" "sample" {
      }
   }
 
+resource "key_pair" "etc_auth" {
+
+  key_name   = "etckey"
+  public_key = file{"~/.ssh/etckey.pub"}
+
+}
+
 
 resource "aws_security_group" "allow_tls" {
   name        = "allow_tls"
