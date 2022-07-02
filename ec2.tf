@@ -35,7 +35,7 @@ resource "aws_security_group" "allow_tls" {
   }
 }
 
-resource "key_pair" "etc_auth" {
+resource "aws_key_pair" "etc_auth" {
   key_name   = "etckey"
-  public_key = file("~/.ssh/etckey.pub")
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHGKzRXd3F9RJGn5WRD31hMplcJHEYbHGtfASSszTJJ4 hp@DESKTOP-DL3999I"
 }
